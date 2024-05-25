@@ -3,10 +3,17 @@ import { FC } from 'react';
 
 const About: FC = () => (
   <Section
+    mx="auto"
     display="flex"
+    maxWidth="76rem"
     alignItems="center"
     justifyContent="center"
-    flexDirection={['column-reverse', 'column-reverse', 'row']}
+    flexDirection={[
+      'column-reverse',
+      'column-reverse',
+      'column-reverse',
+      'row',
+    ]}
   >
     <Img src="/img/logo.webp" alt="logo" maxHeight="30rem" />
     <Div
@@ -16,7 +23,11 @@ const About: FC = () => (
       maxWidth="35rem"
       flexDirection="column"
     >
-      <H2 color="#F5EA8F" fontSize="3.5rem">
+      <H2
+        color="#F5EA8F"
+        fontSize="3.5rem"
+        textAlign={['center', 'center', 'center', 'unset']}
+      >
         About
       </H2>
       <P

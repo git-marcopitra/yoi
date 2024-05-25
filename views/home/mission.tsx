@@ -3,10 +3,12 @@ import { FC } from 'react';
 
 const Mission: FC = () => (
   <Section
+    mx="auto"
     display="flex"
+    maxWidth="76rem"
     alignItems="center"
     justifyContent="center"
-    flexDirection={['column', 'column', 'row']}
+    flexDirection={['column', 'column', 'column', 'row']}
   >
     <Div
       p="2rem"
@@ -15,7 +17,11 @@ const Mission: FC = () => (
       maxWidth="45rem"
       flexDirection="column"
     >
-      <H2 color="#F5EA8F" fontSize="3.5rem">
+      <H2
+        color="#F5EA8F"
+        fontSize="3.5rem"
+        textAlign={['center', 'center', 'center', 'unset']}
+      >
         Mission
       </H2>
       <P

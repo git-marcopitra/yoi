@@ -138,46 +138,18 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
       {children}
       <Footer
         p="2rem"
-        pb="0"
-        mt="2rem"
-        borderTopLeftRadius="3rem"
-        borderTopRightRadius="3rem"
-        borderTop="5px solid #F5EA8F"
+        mx="auto"
+        display="flex"
+        maxWidth="90vw"
+        alignItems="center"
+        borderTop="1px solid #fff"
+        justifyContent="space-between"
+        flexDirection={['column-reverse', 'column-reverse', 'row']}
       >
-        <Div
-          mx="auto"
-          display="flex"
-          maxWidth="90rem"
-          justifyContent="space-between"
-          flexDirection={['column', 'column', 'column', 'row']}
-          alignItems={['center', 'center', 'center', 'flex-end']}
-        >
-          <Div display="flex" flexDirection="column" gap="2.5rem" pb="2rem">
-            <Div>
-              <Img
-                alt="Title logo"
-                maxHeight="15rem"
-                src="/img/title-logo.webp"
-              />
-              <P fontSize="2.4rem" color="#fff">
-                {"Let's"} Go!!!
-              </P>
-            </Div>
-            <Social />
-          </Div>
-          <Img maxHeight="30rem" src="/img/logo.webp" alt="logo" />
-        </Div>
-        <Div borderTop="3px solid #F5EA8F" py="2rem">
-          <P
-            mx="auto"
-            color="#fff"
-            maxWidth="90rem"
-            fontSize="1.25rem"
-            fontFamily="Grandstander"
-          >
-            © 2024 Yoiinu • All Rights Reserved
-          </P>
-        </Div>
+        <P color="#fff" fontSize="1.25rem" fontFamily="Grandstander">
+          © 2024 Yoiinu • All Rights Reserved
+        </P>
+        <Social />
       </Footer>
     </Main>
   );

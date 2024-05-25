@@ -1,11 +1,12 @@
-import { H1 } from '@stylin.js/elements';
 import { FC } from 'react';
 
 import { Layout } from '@/components';
 
+import Hero from './hero';
+
 const Home: FC = () => (
   <Layout>
-    <H1>Home</H1>
+    <Hero />
   </Layout>
 );
 

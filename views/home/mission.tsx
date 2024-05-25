@@ -4,6 +4,8 @@ import { FC } from 'react';
 const Mission: FC = () => (
   <Section
     mx="auto"
+    my="5rem"
+    id="mission"
     display="flex"
     maxWidth="76rem"
     alignItems="center"

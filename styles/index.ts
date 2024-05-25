@@ -24,12 +24,15 @@ export const GlobalStyles = css`
   html {
     overflow-x: hidden;
   }
+  /* Frame 1321314640 */
 
   body {
-    background-image: radial-gradient(
-      at center center,
-      #40bafa 24%,
-      #abb5e9 74%
+    background-image: linear-gradient(
+      180deg,
+      #ffacd4 0%,
+      #afbfde 33.5%,
+      #8ac8e3 76.5%,
+      #2a0919 100%
     );
     background-repeat: no-repeat;
   }

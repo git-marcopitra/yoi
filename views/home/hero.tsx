@@ -1,17 +1,46 @@
-import { Div, Img, type ImgProps, P, Section } from '@stylin.js/elements';
+import {
+  Div,
+  type DivProps,
+  Img,
+  type ImgProps,
+  P,
+  Section,
+} from '@stylin.js/elements';
 import { type CustomDomComponent, motion } from 'framer-motion';
 import type { FC } from 'react';
 
 import { Social } from '@/components';
 
-export type MotionComponent = CustomDomComponent<Omit<ImgProps, 'transition'>>;
+export type MotionImgComponent = CustomDomComponent<
+  Omit<ImgProps, 'transition'>
+>;
+export type MotionDivComponent = CustomDomComponent<
+  Omit<DivProps, 'transition'>
+>;
 
-const AnimatedImg = motion(Img) as MotionComponent;
+const AnimatedDiv = motion(Div) as MotionDivComponent;
+const AnimatedImg = motion(Img) as MotionImgComponent;
+
+const variants = {
+  offscreen: {
+    x: '20vw',
+  },
+  onscreen: {
+    x: '0vw',
+    transition: {
+      bounce: 0.2,
+      duration: 1,
+      type: 'spring',
+    },
+  },
+};
 
 const Hero: FC = () => (
   <Section
     mx="auto"
+    my="5rem"
     px="2rem"
+    id="home"
     display="flex"
     color="#ffffff"
     maxWidth="90rem"
@@ -31,22 +60,36 @@ const Hero: FC = () => (
         flexDirection="column"
         alignItems={['center', 'center', 'unset']}
       >
-        <P textAlign={['center', 'center', 'center', 'unset']}>Introducing</P>
+        <P
+          fontSize="2rem"
+          fontFamily="Grandstander"
+          textAlign={['center', 'center', 'center', 'unset']}
+        >
+          Introducing
+        </P>
         <Img
           maxWidth={['22rem', '25rem', '32rem']}
           src="/img/title-logo.webp"
           alt="Title logo"
         />
-        <P maxWidth="32rem" textAlign={['center', 'center', 'center', 'unset']}>
+        <P
+          maxWidth="32rem"
+          fontSize="1.5rem"
+          fontFamily="Grandstander"
+          textAlign={['center', 'center', 'center', 'unset']}
+        >
           Trust and transparency, unleashed
         </P>
       </Div>
       <Social />
     </Div>
-    <Div
+    <AnimatedDiv
       display="flex"
       position="relative"
       alignItems="center"
+      initial="offscreen"
+      variants={variants}
+      whileInView="onscreen"
       justifyContent="center"
     >
       <Img src="/img/yoi-cloud-1.webp" alt="logo" maxWidth="32rem" />
@@ -58,7 +101,7 @@ const Hero: FC = () => (
         src="/img/yoi-cloud-2.webp"
         transition={{ duration: 0.2, repeat: Infinity, repeatType: 'reverse' }}
       />
-    </Div>
+    </AnimatedDiv>
   </Section>
 );
 

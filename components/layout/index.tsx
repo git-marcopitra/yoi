@@ -1,5 +1,4 @@
 import {
-  Button,
   Div,
   Footer,
   Header,
@@ -9,6 +8,7 @@ import {
   Nav,
   P,
 } from '@stylin.js/elements';
+import Link from 'next/link';
 import { FC, PropsWithChildren, useState } from 'react';
 
 import Social from '../social';
@@ -19,11 +19,11 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <Main minHeight="100vh">
-      <Header m="1rem" p="1rem" bg="#FF8AC9" borderRadius="100rem">
+      <Header p="1rem" borderRadius="100rem">
         <Div
           mx="auto"
           display="flex"
-          maxWidth="80rem"
+          maxWidth="90rem"
           alignItems="center"
           justifyContent="space-between"
         >
@@ -71,67 +71,66 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
               'flex',
             ]}
           >
-            <Li
-              cursor="pointer"
-              transition="all 300ms ease-in"
-              onClick={() => setIsOpen(false)}
-              nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
-            >
-              Home
-            </Li>
-            <Li
-              cursor="pointer"
-              transition="all 300ms ease-in"
-              onClick={() => setIsOpen(false)}
-              nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
-            >
-              About
-            </Li>
-            <Li
-              cursor="pointer"
-              transition="all 300ms ease-in"
-              onClick={() => setIsOpen(false)}
-              nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
-            >
-              Mission
-            </Li>
-            <Li
-              cursor="pointer"
-              transition="all 300ms ease-in"
-              onClick={() => setIsOpen(false)}
-              nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
-            >
-              Tokenomics
-            </Li>
-            <Li
-              cursor="pointer"
-              transition="all 300ms ease-in"
-              onClick={() => setIsOpen(false)}
-              nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
-            >
-              Roadmap
-            </Li>
-            <Li
-              cursor="pointer"
-              transition="all 300ms ease-in"
-              onClick={() => setIsOpen(false)}
-              nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
-            >
-              How to buy
-            </Li>
-            <Button
-              all="unset"
-              p="1.2rem 2rem"
-              fontSize="1.2rem"
-              cursor="not-allowed"
-              borderRadius="100rem"
-              border="3px solid white"
-              filter="grayScale(100%)"
-              fontFamily="Grandstander"
-              bg="linear-gradient(90deg, #FFA9CD 0%, #A3ADF3 100%);"
-            >
-              Buy now
-            </Button>
+            <Link href="/#home">
+              <Li
+                cursor="pointer"
+                transition="all 300ms ease-in"
+                onClick={() => setIsOpen(false)}
+                nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
+              >
+                Home
+              </Li>
+            </Link>
+            <Link href="/#about">
+              <Li
+                cursor="pointer"
+                transition="all 300ms ease-in"
+                onClick={() => setIsOpen(false)}
+                nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
+              >
+                About
+              </Li>
+            </Link>
+            <Link href="/#mission">
+              <Li
+                cursor="pointer"
+                transition="all 300ms ease-in"
+                onClick={() => setIsOpen(false)}
+                nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
+              >
+                Mission
+              </Li>
+            </Link>
+            <Link href="/#tokenomics">
+              <Li
+                cursor="pointer"
+                transition="all 300ms ease-in"
+                onClick={() => setIsOpen(false)}
+                nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
+              >
+                Tokenomics
+              </Li>
+            </Link>
+            <Link href="/#roadmap">
+              <Li
+                cursor="pointer"
+                transition="all 300ms ease-in"
+                onClick={() => setIsOpen(false)}
+                nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
+              >
+                Roadmap
+              </Li>
+            </Link>
+            <Link href="/#howtobuy">
+              <Li
+                cursor="pointer"
+                transition="all 300ms ease-in"
+                onClick={() => setIsOpen(false)}
+                nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
+              >
+                How to buy
+              </Li>
+            </Link>
           </Nav>
         </Div>
       </Header>

@@ -1,6 +1,7 @@
 import {
   Article,
   Div,
+  type DivProps,
   H2,
   H3,
   Img,
@@ -9,10 +10,15 @@ import {
   Span,
   Ul,
 } from '@stylin.js/elements';
+import { type CustomDomComponent, motion } from 'framer-motion';
 import { FC } from 'react';
 
+type MotionComponent = CustomDomComponent<Omit<DivProps, 'transition'>>;
+
+const AnimatedBallon = motion(Div) as MotionComponent;
+
 const Roadmap: FC = () => (
-  <Section my="5rem" mx="auto" maxWidth="76rem">
+  <Section my="5rem" mx="auto" maxWidth="76rem" id="roadmap">
     <H2
       color="#F5EA8F"
       textAlign="center"
@@ -23,18 +29,26 @@ const Roadmap: FC = () => (
     <Div
       mx="auto"
       display="grid"
+      justifyContent="center"
       maxWidth={['30rem', '30rem', '30rem', '60rem']}
       gridTemplateColumns={['30rem', '30rem', '30rem', '30rem 30rem']}
     >
-      <Div
+      <AnimatedBallon
         pt="5.5rem"
         pb="7.5rem"
         px="6.5rem"
         width="30rem"
         height="30rem"
         display="flex"
-        backgroundImage="url(/img/roadmap.webp)"
+        backgroundImage="url(/img/roadmap-balloon.webp)"
         backgroundSize="contain"
+        animate={{ rotate: ['5deg', '-5deg'] }}
+        transition={{
+          repeat: Infinity,
+          repeatType: 'reverse',
+          delay: Math.random() * 0.3,
+          duration: 0.8 + Math.random() * 0.2,
+        }}
       >
         <Article
           p="2rem"
@@ -63,47 +77,65 @@ const Roadmap: FC = () => (
             </Li>
           </Ul>
         </Article>
-      </Div>
-      <Div />
-      <Div />
-      <Div
-        pt="5.5rem"
-        pb="7.5rem"
-        px="6.5rem"
-        width="30rem"
-        height="30rem"
-        display="flex"
-        position="relative"
+      </AnimatedBallon>
+      <AnimatedBallon
         backgroundImage="url(/img/roadmap.webp)"
         backgroundSize="contain"
-      >
-        <Article
-          p="2rem"
-          flex="1"
-          gap="2rem"
+        display={['none', 'none', 'none', 'block']}
+        animate={{ y: ['1rem', '0rem'] }}
+        transition={{
+          duration: 0.8,
+          repeat: Infinity,
+          repeatType: 'reverse',
+        }}
+      />
+      <Div />
+      <Div position="relative">
+        <AnimatedBallon
+          pt="5.5rem"
+          pb="7.5rem"
+          px="6.5rem"
+          width="30rem"
+          height="30rem"
           display="flex"
-          flexDirection="column"
+          backgroundImage="url(/img/roadmap-balloon.webp)"
+          backgroundSize="contain"
+          animate={{ rotate: ['5deg', '-5deg'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
-          <H3 color="#FD94D4">Phase 2</H3>
-          <Ul gap="1rem" display="flex" flexDirection="column">
-            <Li fontFamily="Grandstander">
-              {' > '}
-              CMC + CoinGecko Listing
-            </Li>
-            <Li fontFamily="Grandstander">
-              {' > '}
-              Community Building
-            </Li>
-            <Li fontFamily="Grandstander">
-              {' > '}
-              Partnership
-            </Li>
-            <Li fontFamily="Grandstander">
-              {' > '}
-              CEX Listing
-            </Li>
-          </Ul>
-        </Article>
+          <Article
+            p="2rem"
+            flex="1"
+            gap="2rem"
+            display="flex"
+            flexDirection="column"
+          >
+            <H3 color="#FD94D4">Phase 2</H3>
+            <Ul gap="1rem" display="flex" flexDirection="column">
+              <Li fontFamily="Grandstander">
+                {' > '}
+                CMC + CoinGecko Listing
+              </Li>
+              <Li fontFamily="Grandstander">
+                {' > '}
+                Community Building
+              </Li>
+              <Li fontFamily="Grandstander">
+                {' > '}
+                Partnership
+              </Li>
+              <Li fontFamily="Grandstander">
+                {' > '}
+                CEX Listing
+              </Li>
+            </Ul>
+          </Article>
+        </AnimatedBallon>
         <Div
           top="-35%"
           position="absolute"
@@ -113,40 +145,51 @@ const Roadmap: FC = () => (
           <Img src="/img/line.webp" alt="Line" width="20rem" />
         </Div>
       </Div>
-      <Div
-        pt="5.5rem"
-        pb="7.5rem"
-        px="6.5rem"
-        width="30rem"
-        height="30rem"
-        display="flex"
-        position="relative"
-        backgroundImage="url(/img/roadmap.webp)"
-        backgroundSize="contain"
-      >
-        <Article
-          flex="1"
-          py="2rem"
-          px="1rem"
-          gap="2rem"
+      <Div position="relative">
+        <AnimatedBallon
+          pt="5.5rem"
+          pb="7.5rem"
+          px="6.5rem"
+          width="30rem"
+          height="30rem"
           display="flex"
-          flexDirection="column"
+          position="relative"
+          backgroundImage="url(/img/roadmap-balloon.webp)"
+          backgroundSize="contain"
+          animate={{ rotate: ['5deg', '-5deg'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
-          <Div>
-            <H3 color="#FD94D4">Phase 3</H3>
-            <Span fontFamily="Grandstander">(After 3 months or $100M MC)</Span>
-          </Div>
-          <Ul gap="1rem" display="flex" flexDirection="column">
-            <Li fontFamily="Grandstander">
-              {' > '}
-              Burn all Marketing funds
-            </Li>
-            <Li fontFamily="Grandstander">
-              {' > '}
-              Many more...
-            </Li>
-          </Ul>
-        </Article>
+          <Article
+            flex="1"
+            py="2rem"
+            px="1rem"
+            gap="2rem"
+            display="flex"
+            flexDirection="column"
+          >
+            <Div>
+              <H3 color="#FD94D4">Phase 3</H3>
+              <Span fontFamily="Grandstander">
+                (After 3 months or $100M MC)
+              </Span>
+            </Div>
+            <Ul gap="1rem" display="flex" flexDirection="column">
+              <Li fontFamily="Grandstander">
+                {' > '}
+                Burn all Marketing funds
+              </Li>
+              <Li fontFamily="Grandstander">
+                {' > '}
+                Many more...
+              </Li>
+            </Ul>
+          </Article>
+        </AnimatedBallon>
         <Div
           top="-35%"
           position="absolute"

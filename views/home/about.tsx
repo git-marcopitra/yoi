@@ -4,6 +4,8 @@ import { FC } from 'react';
 const About: FC = () => (
   <Section
     mx="auto"
+    my="5rem"
+    id="about"
     display="flex"
     maxWidth="76rem"
     alignItems="center"

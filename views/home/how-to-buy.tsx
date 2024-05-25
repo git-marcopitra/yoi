@@ -1,8 +1,21 @@
-import { Article, Div, H2, H3, P, Section } from '@stylin.js/elements';
+import {
+  Article,
+  Div,
+  DivProps,
+  H2,
+  H3,
+  P,
+  Section,
+} from '@stylin.js/elements';
+import { type CustomDomComponent, motion } from 'framer-motion';
 import { FC } from 'react';
 
+type MotionComponent = CustomDomComponent<Omit<DivProps, 'transition'>>;
+
+const AnimatedBallon = motion(Div) as MotionComponent;
+
 const HowToBuy: FC = () => (
-  <Section my="5rem" mx="auto" maxWidth="90rem">
+  <Section my="5rem" mx="auto" maxWidth="90rem" id="howtobuy">
     <H2
       color="#F5EA8F"
       textAlign="center"
@@ -23,7 +36,7 @@ const HowToBuy: FC = () => (
       ]}
     >
       <Article>
-        <Div
+        <AnimatedBallon
           p="2rem"
           width="18rem"
           height="18rem"
@@ -33,12 +46,19 @@ const HowToBuy: FC = () => (
           backgroundImage="url(/img/speech-title.webp)"
           backgroundRepeat="no-repeat"
           backgroundSize="contain"
+          animate={{ rotate: ['5deg', '-5deg'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
           <H3 color="#FD94D4" textAlign="center">
             Create a Wallet
           </H3>
-        </Div>
-        <Div
+        </AnimatedBallon>
+        <AnimatedBallon
           p="4rem"
           flex="1"
           mt="-8rem"
@@ -51,6 +71,13 @@ const HowToBuy: FC = () => (
           backgroundImage="url(/img/speech-balloon.webp)"
           backgroundRepeat="no-repeat"
           backgroundSize="contain"
+          animate={{ y: ['1rem', '0rem'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
           <P
             color="#ffffff"
@@ -62,10 +89,10 @@ const HowToBuy: FC = () => (
             google play store for free. Desktop users, download the google
             chrome extension by going to phantom.app.
           </P>
-        </Div>
+        </AnimatedBallon>
       </Article>
       <Article>
-        <Div
+        <AnimatedBallon
           p="2rem"
           width="18rem"
           height="18rem"
@@ -75,12 +102,19 @@ const HowToBuy: FC = () => (
           backgroundImage="url(/img/speech-title.webp)"
           backgroundRepeat="no-repeat"
           backgroundSize="contain"
+          animate={{ rotate: ['5deg', '-5deg'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
           <H3 color="#FD94D4" textAlign="center">
             Get Some SOL
           </H3>
-        </Div>
-        <Div
+        </AnimatedBallon>
+        <AnimatedBallon
           p="4rem"
           flex="1"
           mt="-8rem"
@@ -93,6 +127,13 @@ const HowToBuy: FC = () => (
           backgroundImage="url(/img/speech-balloon.webp)"
           backgroundRepeat="no-repeat"
           backgroundSize="contain"
+          animate={{ y: ['1rem', '0rem'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
           <P
             color="#ffffff"
@@ -104,10 +145,10 @@ const HowToBuy: FC = () => (
             SOL, you can buy SOL from an exchange or cross chain swap and send
             it to your wallet.
           </P>
-        </Div>
+        </AnimatedBallon>
       </Article>
       <Article>
-        <Div
+        <AnimatedBallon
           p="2rem"
           width="18rem"
           height="18rem"
@@ -117,12 +158,19 @@ const HowToBuy: FC = () => (
           backgroundImage="url(/img/speech-title.webp)"
           backgroundRepeat="no-repeat"
           backgroundSize="contain"
+          animate={{ rotate: ['5deg', '-5deg'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
           <H3 color="#FD94D4" textAlign="center">
             Go to Raydium
           </H3>
-        </Div>
-        <Div
+        </AnimatedBallon>
+        <AnimatedBallon
           p="4rem"
           flex="1"
           mt="-8rem"
@@ -135,6 +183,13 @@ const HowToBuy: FC = () => (
           backgroundImage="url(/img/speech-balloon.webp)"
           backgroundRepeat="no-repeat"
           backgroundSize="contain"
+          animate={{ y: ['1rem', '0rem'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
           <P
             color="#ffffff"
@@ -146,10 +201,10 @@ const HowToBuy: FC = () => (
             wallet. Paste the $Yoi token address into Raydium and confirm the
             swap. When Phantom prompts you for a wallet signature, sign.
           </P>
-        </Div>
+        </AnimatedBallon>
       </Article>
       <Article>
-        <Div
+        <AnimatedBallon
           p="2rem"
           width="18rem"
           height="18rem"
@@ -159,12 +214,19 @@ const HowToBuy: FC = () => (
           backgroundImage="url(/img/speech-title.webp)"
           backgroundRepeat="no-repeat"
           backgroundSize="contain"
+          animate={{ rotate: ['5deg', '-5deg'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
           <H3 color="#FD94D4" textAlign="center">
             Switch SOL for $Yoi
           </H3>
-        </Div>
-        <Div
+        </AnimatedBallon>
+        <AnimatedBallon
           p="4rem"
           flex="1"
           mt="-8rem"
@@ -177,6 +239,13 @@ const HowToBuy: FC = () => (
           backgroundImage="url(/img/speech-balloon.webp)"
           backgroundRepeat="no-repeat"
           backgroundSize="contain"
+          animate={{ y: ['1rem', '0rem'] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: 'reverse',
+            delay: Math.random(),
+            duration: 0.8 + Math.random(),
+          }}
         >
           <P
             color="#ffffff"
@@ -188,7 +257,7 @@ const HowToBuy: FC = () => (
             about buying with a specific slippage, although you may need to use
             slippage during times of market volatility.
           </P>
-        </Div>
+        </AnimatedBallon>
       </Article>
     </Div>
   </Section>

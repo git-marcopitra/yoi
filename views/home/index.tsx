@@ -5,6 +5,7 @@ import { Layout } from '@/components';
 import About from './about';
 import Hero from './hero';
 import Mission from './mission';
+import Roadmap from './roadmap';
 import Tokenomics from './tokenomics';
 
 const Home: FC = () => (
@@ -13,6 +14,7 @@ const Home: FC = () => (
     <About />
     <Mission />
     <Tokenomics />
+    <Roadmap />
   </Layout>
 );
 

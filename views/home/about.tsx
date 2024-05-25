@@ -25,7 +25,7 @@ const About: FC = () => (
     >
       <H2
         color="#F5EA8F"
-        fontSize="3.5rem"
+        fontSize={['2rem', '2rem', '2rem', '3.5rem']}
         textAlign={['center', 'center', 'center', 'unset']}
       >
         About

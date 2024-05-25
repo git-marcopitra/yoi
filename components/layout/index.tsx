@@ -167,7 +167,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
           </Div>
           <Img maxHeight="30rem" src="/img/logo.webp" alt="logo" />
         </Div>
-        <Div borderTop="3px solid  #F5EA8F" py="2rem">
+        <Div borderTop="3px solid #F5EA8F" py="2rem">
           <P
             mx="auto"
             color="#fff"

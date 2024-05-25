@@ -1,12 +1,19 @@
 import { css } from '@emotion/react';
 
 export const GlobalStyles = css`
+  @font-face {
+    font-family: 'Chubby Rounded';
+    src: url('/fonts/Chubby-Rounded.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Chubby Rounded';
   }
 
   html {
@@ -18,32 +25,21 @@ export const GlobalStyles = css`
     overflow-x: hidden;
   }
 
+  body {
+    background-image: radial-gradient(
+      at center center,
+      #40bafa 24%,
+      #abb5e9 74%
+    );
+    background-repeat: no-repeat;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
   }
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-    padding: 2rem;
-  }
 
-  /* Track */
-  ::-webkit-scrollbar-track {
-    border-radius: 0.5rem;
-    background: transparent;
-    transition: all 300ms ease-in-out;
-  }
-
-  /* Track on hover */
-  ::-webkit-scrollbar-track:hover {
-    background: #fff1;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 0.5rem;
-    border: 5px solid transparent;
+  li {
+    list-style: none;
   }
 `;

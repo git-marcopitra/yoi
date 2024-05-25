@@ -1,1 +1,2 @@
-export { default as LogoSVG } from './logo';
+export { default as BarsSVG } from './bars';
+export { default as TimesSVG } from './times';

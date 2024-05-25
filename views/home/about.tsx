@@ -13,7 +13,7 @@ const About: FC = () => (
       p="2rem"
       gap="2rem"
       display="flex"
-      maxWidth="30rem"
+      maxWidth="35rem"
       flexDirection="column"
     >
       <H2 color="#F5EA8F" fontSize="3.5rem">

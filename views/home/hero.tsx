@@ -68,7 +68,7 @@ const Hero: FC = () => (
           Introducing
         </P>
         <Img
-          maxWidth={['22rem', '25rem', '32rem']}
+          maxWidth={['18rem', '22rem', '25rem', '32rem']}
           src="/img/title-logo.webp"
           alt="Title logo"
         />
@@ -92,13 +92,17 @@ const Hero: FC = () => (
       whileInView="onscreen"
       justifyContent="center"
     >
-      <Img src="/img/yoi-cloud-1.webp" alt="logo" maxWidth="32rem" />
+      <Img
+        alt="logo"
+        src="/img/yoi-cloud-1.webp"
+        maxWidth={['22rem', '25rem', '32rem']}
+      />
       <AnimatedImg
         alt="logo"
-        maxWidth="32rem"
         position="absolute"
-        animate={{ opacity: [1, 0] }}
         src="/img/yoi-cloud-2.webp"
+        animate={{ opacity: [1, 0] }}
+        maxWidth={['22rem', '25rem', '32rem']}
         transition={{ duration: 0.2, repeat: Infinity, repeatType: 'reverse' }}
       />
     </AnimatedDiv>

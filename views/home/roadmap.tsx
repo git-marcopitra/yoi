@@ -30,16 +30,15 @@ const Roadmap: FC = () => (
       mx="auto"
       display="grid"
       justifyContent="center"
-      maxWidth={['30rem', '30rem', '30rem', '60rem']}
-      gridTemplateColumns={['30rem', '30rem', '30rem', '30rem 30rem']}
+      maxWidth={['25rem', '30rem', '30rem', '60rem']}
+      gridTemplateColumns={['25rem', '30rem', '30rem', '30rem 30rem']}
     >
       <AnimatedBallon
-        pt="5.5rem"
-        pb="7.5rem"
-        px="6.5rem"
-        width="30rem"
-        height="30rem"
         display="flex"
+        pt={['4rem', '5.5rem']}
+        px={['4rem', '6.5rem']}
+        width={['25rem', '30rem']}
+        height={['25rem', '30rem']}
         backgroundImage="url(/img/roadmap-balloon.webp)"
         backgroundSize="contain"
         animate={{ rotate: ['5deg', '-5deg'] }}
@@ -92,12 +91,11 @@ const Roadmap: FC = () => (
       <Div />
       <Div position="relative">
         <AnimatedBallon
-          pt="5.5rem"
-          pb="7.5rem"
-          px="6.5rem"
-          width="30rem"
-          height="30rem"
           display="flex"
+          pt={['4rem', '5.5rem']}
+          px={['4rem', '6.5rem']}
+          width={['25rem', '30rem']}
+          height={['25rem', '30rem']}
           backgroundImage="url(/img/roadmap-balloon.webp)"
           backgroundSize="contain"
           animate={{ rotate: ['5deg', '-5deg'] }}
@@ -142,18 +140,17 @@ const Roadmap: FC = () => (
           transform="rotate(45deg)"
           left={['15%', '15%', '15%', '-30%']}
         >
-          <Img src="/img/line.webp" alt="Line" width="20rem" />
+          <Img src="/img/line.webp" alt="Line" width={['17rem', '20rem']} />
         </Div>
       </Div>
       <Div position="relative">
         <AnimatedBallon
-          pt="5.5rem"
-          pb="7.5rem"
-          px="6.5rem"
-          width="30rem"
-          height="30rem"
           display="flex"
           position="relative"
+          pt={['4rem', '5.5rem']}
+          px={['4rem', '6.5rem']}
+          width={['25rem', '30rem']}
+          height={['25rem', '30rem']}
           backgroundImage="url(/img/roadmap-balloon.webp)"
           backgroundSize="contain"
           animate={{ rotate: ['5deg', '-5deg'] }}
@@ -194,9 +191,9 @@ const Roadmap: FC = () => (
           top="-35%"
           position="absolute"
           transform="rotate(-45deg)"
-          right={['15%', '15%', '15%', '-30%']}
+          right={['20%', '15%', '15%', '-30%']}
         >
-          <Img src="/img/line.webp" alt="Line" width="20rem" />
+          <Img src="/img/line.webp" alt="Line" width={['17rem', '20rem']} />
         </Div>
       </Div>
     </Div>

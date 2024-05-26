@@ -17,7 +17,11 @@ const About: FC = () => (
       'row',
     ]}
   >
-    <Img src="/img/logo.webp" alt="logo" maxHeight="30rem" />
+    <Img
+      alt="logo"
+      src="/img/logo.webp"
+      maxWidth={['20rem', '22rem', '25rem', '32rem']}
+    />
     <Div
       p="2rem"
       gap="2rem"

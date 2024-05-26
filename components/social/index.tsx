@@ -6,8 +6,10 @@ const AnimatedA = motion(A);
 
 const Social: FC = () => (
   <Div
-    display="flex"
+    justifyItems="center"
     gap={['1rem', '2rem']}
+    display={['grid', 'flex']}
+    gridTemplateColumns="1fr 1fr"
     justifyContent={['center', 'center', 'unset']}
   >
     <AnimatedA

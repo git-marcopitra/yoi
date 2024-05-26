@@ -28,11 +28,17 @@ const Tokenomics: FC = () => (
       <H2
         color="#F5EA8F"
         textAlign="center"
-        fontSize={['2rem', '2rem', '2rem', '3.5rem']}
+        fontSize={['1.5rem', '2rem', '2rem', '3.5rem']}
       >
         Tokenomics
       </H2>
-      <Div width="25rem" height="25rem" color="#ffffff" position="relative">
+      <Div
+        width="25rem"
+        height="25rem"
+        color="#ffffff"
+        position="relative"
+        transform={['scale(0.8)', 'scale(1)']}
+      >
         <Img alt="logo" width="25rem" src="/img/tokenomics.webp" />
         <AnimatedSpan
           top="15rem"

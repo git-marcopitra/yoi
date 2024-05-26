@@ -49,7 +49,11 @@ const Mission: FC = () => (
         legacy of goodwill and integrity.
       </P>
     </Div>
-    <Img src="/img/mission.webp" alt="logo" maxHeight="30rem" />
+    <Img
+      alt="logo"
+      src="/img/mission.webp"
+      maxWidth={['20rem', '22rem', '25rem', '32rem']}
+    />
   </Section>
 );
 

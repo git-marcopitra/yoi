@@ -1,5 +1,21 @@
-import { Br, Div, H2, Img, P, Section } from '@stylin.js/elements';
-import { FC } from 'react';
+import {
+  Br,
+  Div,
+  H2,
+  Img,
+  type ImgProps,
+  P,
+  Section,
+} from '@stylin.js/elements';
+import { type CustomDomComponent, motion } from 'framer-motion';
+import type { FC } from 'react';
+
+import { onScreenVariants } from '@/constants/animation';
+
+export type MotionImgComponent = CustomDomComponent<
+  Omit<ImgProps, 'transition'>
+>;
+const AnimatedImg = motion(Img) as MotionImgComponent;
 
 const Mission: FC = () => (
   <Section
@@ -21,6 +37,7 @@ const Mission: FC = () => (
     >
       <H2
         color="#F5EA8F"
+        textShadow="1px 1px 5px #0003"
         fontSize={['2rem', '2rem', '2rem', '3.5rem']}
         textAlign={['center', 'center', 'center', 'unset']}
       >
@@ -31,6 +48,7 @@ const Mission: FC = () => (
         fontSize="1.2rem"
         lineHeight="2rem"
         fontFamily="Grandstander"
+        textAlign={['center', 'center', 'unset']}
       >
         At Yoi Inu, our mission is to transform the meme coin space by fostering
         a community built on trust, transparency, and positivity.
@@ -49,8 +67,11 @@ const Mission: FC = () => (
         legacy of goodwill and integrity.
       </P>
     </Div>
-    <Img
+    <AnimatedImg
       alt="logo"
+      whileInView="onscreen"
+      initial="offscreenLeft"
+      variants={onScreenVariants}
       src="/img/mission.webp"
       maxWidth={['20rem', '22rem', '25rem', '32rem']}
     />

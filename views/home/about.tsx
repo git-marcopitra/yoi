@@ -1,5 +1,13 @@
-import { Br, Div, H2, Img, P, Section } from '@stylin.js/elements';
+import { Br, Div, H2, Img, ImgProps, P, Section } from '@stylin.js/elements';
+import { type CustomDomComponent, motion } from 'framer-motion';
 import { FC } from 'react';
+
+import { onScreenVariants } from '@/constants/animation';
+
+export type MotionImgComponent = CustomDomComponent<
+  Omit<ImgProps, 'transition'>
+>;
+const AnimatedImg = motion(Img) as MotionImgComponent;
 
 const About: FC = () => (
   <Section
@@ -9,17 +17,15 @@ const About: FC = () => (
     display="flex"
     maxWidth="76rem"
     alignItems="center"
-    justifyContent="center"
-    flexDirection={[
-      'column-reverse',
-      'column-reverse',
-      'column-reverse',
-      'row',
-    ]}
+    justifyContent="space-evenly"
+    flexDirection={['column', 'column', 'column', 'row']}
   >
-    <Img
+    <AnimatedImg
       alt="logo"
-      src="/img/logo.webp"
+      src="/img/about.webp"
+      whileInView="onscreen"
+      initial="offscreenRight"
+      variants={onScreenVariants}
       maxWidth={['20rem', '22rem', '25rem', '32rem']}
     />
     <Div
@@ -31,6 +37,7 @@ const About: FC = () => (
     >
       <H2
         color="#F5EA8F"
+        textShadow="1px 1px 5px #0003"
         fontSize={['2rem', '2rem', '2rem', '3.5rem']}
         textAlign={['center', 'center', 'center', 'unset']}
       >
@@ -41,6 +48,7 @@ const About: FC = () => (
         fontSize="1.2rem"
         lineHeight="2rem"
         fontFamily="Grandstander"
+        textAlign={['center', 'center', 'unset']}
       >
         In Solana City, Yoi Inu, a rainbow-colored dog with sparkling eyes,
         emerged as a beacon of positivity. Named after the Japanese word for

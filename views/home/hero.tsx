@@ -10,30 +10,17 @@ import { type CustomDomComponent, motion } from 'framer-motion';
 import type { FC } from 'react';
 
 import { Social } from '@/components';
+import { onScreenVariants } from '@/constants/animation';
+
+export type MotionDivComponent = CustomDomComponent<
+  Omit<DivProps, 'transition'>
+>;
+const AnimatedDiv = motion(Div) as MotionDivComponent;
 
 export type MotionImgComponent = CustomDomComponent<
   Omit<ImgProps, 'transition'>
 >;
-export type MotionDivComponent = CustomDomComponent<
-  Omit<DivProps, 'transition'>
->;
-
-const AnimatedDiv = motion(Div) as MotionDivComponent;
 const AnimatedImg = motion(Img) as MotionImgComponent;
-
-const variants = {
-  offscreen: {
-    x: '20vw',
-  },
-  onscreen: {
-    x: '0vw',
-    transition: {
-      bounce: 0.2,
-      duration: 1,
-      type: 'spring',
-    },
-  },
-};
 
 const Hero: FC = () => (
   <Section
@@ -87,22 +74,24 @@ const Hero: FC = () => (
       display="flex"
       position="relative"
       alignItems="center"
-      initial="offscreen"
-      variants={variants}
       whileInView="onscreen"
+      initial="offscreenLeft"
+      variants={onScreenVariants}
       justifyContent="center"
     >
-      <Img
+      <AnimatedImg
         alt="logo"
         src="/img/yoi-cloud-1.webp"
+        animate={{ x: ['-5px', '5px'] }}
         maxWidth={['22rem', '25rem', '32rem']}
+        transition={{ duration: 0.2, repeat: Infinity, repeatType: 'reverse' }}
       />
       <AnimatedImg
         alt="logo"
         position="absolute"
         src="/img/yoi-cloud-2.webp"
-        animate={{ opacity: [1, 0] }}
         maxWidth={['22rem', '25rem', '32rem']}
+        animate={{ opacity: [1, 0], x: ['-5px', '5px'] }}
         transition={{ duration: 0.2, repeat: Infinity, repeatType: 'reverse' }}
       />
     </AnimatedDiv>

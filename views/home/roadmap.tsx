@@ -13,19 +13,48 @@ import {
 import { type CustomDomComponent, motion } from 'framer-motion';
 import { FC } from 'react';
 
+import { onScreenVariants } from '@/constants/animation';
+
 type MotionComponent = CustomDomComponent<Omit<DivProps, 'transition'>>;
 
 const AnimatedBallon = motion(Div) as MotionComponent;
 
 const Roadmap: FC = () => (
   <Section my="5rem" mx="auto" maxWidth="76rem" id="roadmap">
-    <H2
-      color="#F5EA8F"
-      textAlign="center"
-      fontSize={['2rem', '2rem', '2rem', '3.5rem']}
+    <Div
+      display="flex"
+      flexDirection="column"
+      alignItems="flex-end"
+      gap={['2rem', '5rem']}
     >
-      Roadmap
-    </H2>
+      <H2
+        width="100%"
+        color="#F5EA8F"
+        textAlign="center"
+        textShadow="1px 1px 5px #0003"
+        fontSize={['2rem', '2rem', '2rem', '3.5rem']}
+      >
+        Roadmap
+      </H2>
+      <AnimatedBallon
+        mb="-10rem"
+        width="30rem"
+        height="30rem"
+        whileInView="onscreen"
+        initial="offscreenLeft"
+        variants={onScreenVariants}
+        mx={['unset', 'unset', '5rem']}
+        backgroundImage="url(/img/roadmap.webp)"
+        backgroundSize="contain"
+        display={['none', 'none', 'none', 'block']}
+        animate={{ y: ['1rem', '0rem'] }}
+        transition={{
+          duration: 0.8,
+          repeat: Infinity,
+          repeatType: 'reverse',
+        }}
+      />
+    </Div>
     <Div
       mx="auto"
       display="grid"
@@ -58,36 +87,26 @@ const Roadmap: FC = () => (
         >
           <H3 color="#FD94D4">Phase 1</H3>
           <Ul gap="1rem" display="flex" flexDirection="column">
-            <Li fontFamily="Grandstander">
-              {' > '}
+            <Li fontFamily="Fredoka">
+              {' • '}
               Pump Fun Fair Launch
             </Li>
-            <Li fontFamily="Grandstander">
-              {' > '}
+            <Li fontFamily="Fredoka">
+              {' • '}
               Community Formation
             </Li>
-            <Li fontFamily="Grandstander">
-              {' > '}
+            <Li fontFamily="Fredoka">
+              {' • '}
               Twitter Launch
             </Li>
-            <Li fontFamily="Grandstander">
-              {' > '}
+            <Li fontFamily="Fredoka">
+              {' • '}
               DEX Listing
             </Li>
           </Ul>
         </Article>
       </AnimatedBallon>
-      <AnimatedBallon
-        backgroundImage="url(/img/roadmap.webp)"
-        backgroundSize="contain"
-        display={['none', 'none', 'none', 'block']}
-        animate={{ y: ['1rem', '0rem'] }}
-        transition={{
-          duration: 0.8,
-          repeat: Infinity,
-          repeatType: 'reverse',
-        }}
-      />
+      <Div />
       <Div />
       <Div position="relative">
         <AnimatedBallon
@@ -115,20 +134,20 @@ const Roadmap: FC = () => (
           >
             <H3 color="#FD94D4">Phase 2</H3>
             <Ul gap="1rem" display="flex" flexDirection="column">
-              <Li fontFamily="Grandstander">
-                {' > '}
+              <Li fontFamily="Fredoka">
+                {' • '}
                 CMC + CoinGecko Listing
               </Li>
-              <Li fontFamily="Grandstander">
-                {' > '}
+              <Li fontFamily="Fredoka">
+                {' • '}
                 Community Building
               </Li>
-              <Li fontFamily="Grandstander">
-                {' > '}
+              <Li fontFamily="Fredoka">
+                {' • '}
                 Partnership
               </Li>
-              <Li fontFamily="Grandstander">
-                {' > '}
+              <Li fontFamily="Fredoka">
+                {' • '}
                 CEX Listing
               </Li>
             </Ul>
@@ -171,17 +190,15 @@ const Roadmap: FC = () => (
           >
             <Div>
               <H3 color="#FD94D4">Phase 3</H3>
-              <Span fontFamily="Grandstander">
-                (After 3 months or $100M MC)
-              </Span>
+              <Span fontFamily="Fredoka">(After 3 months or $100M MC)</Span>
             </Div>
             <Ul gap="1rem" display="flex" flexDirection="column">
-              <Li fontFamily="Grandstander">
-                {' > '}
+              <Li fontFamily="Fredoka">
+                {' • '}
                 Burn all Marketing funds
               </Li>
-              <Li fontFamily="Grandstander">
-                {' > '}
+              <Li fontFamily="Fredoka">
+                {' • '}
                 Many more...
               </Li>
             </Ul>

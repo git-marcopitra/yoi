@@ -6,6 +6,7 @@ const HowToBuy: FC = () => (
     <H2
       color="#F5EA8F"
       textAlign="center"
+      textShadow="1px 1px 5px #0003"
       fontSize={['2rem', '2rem', '2rem', '3.5rem']}
     >
       How To Buy
@@ -40,9 +41,9 @@ const HowToBuy: FC = () => (
         </H3>
         <P
           color="#000000"
-          textAlign="center"
           lineHeight="1.3rem"
           fontFamily="Grandstander"
+          textAlign={['center', 'center', 'unset']}
         >
           Download Phantom or your wallet of choice from the app store or google
           play store for free. Desktop users, download the google chrome
@@ -65,9 +66,9 @@ const HowToBuy: FC = () => (
         </H3>
         <P
           color="#000000"
-          textAlign="center"
           lineHeight="1.3rem"
           fontFamily="Grandstander"
+          textAlign={['center', 'center', 'unset']}
         >
           Have SOL in your wallet to switch to $Yoi. If you don’t have any SOL,
           you can buy SOL from an exchange or cross chain swap and send it to
@@ -95,9 +96,9 @@ const HowToBuy: FC = () => (
         </H3>
         <P
           color="#000000"
-          textAlign="center"
           lineHeight="1.3rem"
           fontFamily="Grandstander"
+          textAlign={['center', 'center', 'unset']}
         >
           Go raydium.io in google chrome inside your Phantom app. Connect your
           wallet. Paste the $Yoi token address into Raydium and confirm the
@@ -125,9 +126,9 @@ const HowToBuy: FC = () => (
         </H3>
         <P
           color="#000000"
-          textAlign="center"
           lineHeight="1.3rem"
           fontFamily="Grandstander"
+          textAlign={['center', 'center', 'unset']}
         >
           Switch SOL for $Yoi. We have ZERO taxes so you don’t need to worry
           about buying with a specific slippage, although you may need to use

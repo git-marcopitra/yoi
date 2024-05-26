@@ -8,6 +8,13 @@ export const GlobalStyles = css`
     font-display: swap;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Fredoka';
+    src: url('/fonts/fredoka-one.one-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
 
   * {
     margin: 0;
@@ -24,17 +31,18 @@ export const GlobalStyles = css`
   html {
     overflow-x: hidden;
   }
-  /* Frame 1321314640 */
 
   body {
+    background-repeat: no-repeat;
     background-image: linear-gradient(
       180deg,
-      #ffacd4 0%,
-      #afbfde 33.5%,
-      #8ac8e3 76.5%,
-      #2a0919 100%
+      #95aef7 0%,
+      #e3a7d6 18.5%,
+      #feb5b9 36.5%,
+      #93ee93 55.5%,
+      #74d3c9 76.5%,
+      #74c1ea 100%
     );
-    background-repeat: no-repeat;
   }
 
   a {

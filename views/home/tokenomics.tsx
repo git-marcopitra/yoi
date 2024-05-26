@@ -1,6 +1,7 @@
 import {
   Button,
   Div,
+  DivProps,
   H2,
   Img,
   P,
@@ -12,6 +13,12 @@ import { type CustomDomComponent, motion } from 'framer-motion';
 import { FC } from 'react';
 
 import { CopySVG, StarSVG } from '@/components/svg';
+import { onScreenVariants } from '@/constants/animation';
+
+export type MotionDivComponent = CustomDomComponent<
+  Omit<DivProps, 'transition'>
+>;
+const AnimatedDiv = motion(Div) as MotionDivComponent;
 
 type MotionComponent = CustomDomComponent<Omit<SpanProps, 'transition'>>;
 
@@ -28,15 +35,19 @@ const Tokenomics: FC = () => (
       <H2
         color="#F5EA8F"
         textAlign="center"
+        textShadow="1px 1px 5px #0003"
         fontSize={['1.5rem', '2rem', '2rem', '3.5rem']}
       >
         Tokenomics
       </H2>
-      <Div
+      <AnimatedDiv
         width="25rem"
         height="25rem"
         color="#ffffff"
         position="relative"
+        whileInView="onscreen"
+        initial="offscreenRight"
+        variants={onScreenVariants}
         transform={['scale(0.8)', 'scale(1)']}
       >
         <Img alt="logo" width="25rem" src="/img/tokenomics.webp" />
@@ -85,17 +96,16 @@ const Tokenomics: FC = () => (
         >
           <StarSVG maxHeight="1rem" maxWidth="1rem" width="100%" />
         </AnimatedSpan>
-      </Div>
+      </AnimatedDiv>
       <Div
-        p="2rem"
         mx="auto"
-        mt="2rem"
         gap="2rem"
         width="100%"
         display="flex"
         maxWidth="76rem"
         position="relative"
         flexDirection="column"
+        p={['1rem', '1rem', '2rem']}
       >
         <Div
           py="2rem"

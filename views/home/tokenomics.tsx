@@ -85,7 +85,7 @@ const Tokenomics: FC = () => (
         mx="auto"
         mt="2rem"
         gap="2rem"
-        width="76rem"
+        width="100%"
         display="flex"
         maxWidth="76rem"
         position="relative"
@@ -94,7 +94,6 @@ const Tokenomics: FC = () => (
         <Div
           py="2rem"
           bg="white"
-          width="100%"
           borderRadius="1rem"
           p={['1rem', '2rem']}
           border="4px solid #F5EA8F"
@@ -194,7 +193,7 @@ const Tokenomics: FC = () => (
               Symbol
             </P>
             <P fontFamily="Grandstander" fontSize="1.8rem" color="#fff">
-              Yoi
+              $Yoi
             </P>
           </Div>
         </Div>

@@ -46,7 +46,7 @@ const Hero: FC = () => (
     maxWidth="90rem"
     alignItems="center"
     mt={['1rem', '2rem', '5rem']}
-    justifyContent="space-between"
+    justifyContent="space-evenly"
     flexDirection={[
       'column-reverse',
       'column-reverse',

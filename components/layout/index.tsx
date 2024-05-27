@@ -148,6 +148,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
       <Footer
         p="2rem"
         mx="auto"
+        gap="1rem"
         display="flex"
         maxWidth="90vw"
         alignItems="center"
@@ -155,7 +156,12 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
         justifyContent="space-between"
         flexDirection={['column-reverse', 'column-reverse', 'row']}
       >
-        <P color="#fff" fontSize="1.25rem" fontFamily="Grandstander">
+        <P
+          color="#fff"
+          fontSize="1.25rem"
+          textAlign="center"
+          fontFamily="Grandstander"
+        >
           © 2024 Yoiinu • All Rights Reserved
         </P>
         <Social small />

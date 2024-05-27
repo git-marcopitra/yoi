@@ -8,8 +8,8 @@ const Social: FC<{ small?: boolean }> = ({ small }) => (
   <Div
     justifyItems="center"
     gap={['1rem', '2rem']}
-    display={['grid', 'flex']}
     gridTemplateColumns="1fr 1fr"
+    display={small ? 'flex' : ['grid', 'flex']}
     justifyContent={['center', 'center', 'unset']}
   >
     <AnimatedA

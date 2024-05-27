@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Layout } from '@/components';
 
 import About from './about';
+import Disclaimer from './disclaimer';
 import FAQ from './faq';
 import Hero from './hero';
 import HowToBuy from './how-to-buy';
@@ -19,6 +20,7 @@ const Home: FC = () => (
     <Roadmap />
     <HowToBuy />
     <FAQ />
+    <Disclaimer />
   </Layout>
 );
 

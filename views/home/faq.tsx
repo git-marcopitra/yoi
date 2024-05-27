@@ -80,6 +80,7 @@ const FAQ: FC = () => {
             width="100%"
             display="flex"
             key={unikey()}
+            cursor="pointer"
             flexDirection="column"
             {...(index && { borderTop: '4px solid #FFA9CD' })}
             onClick={() => setFAQ(index === currentFAQ ? null : index)}

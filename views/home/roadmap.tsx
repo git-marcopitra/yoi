@@ -142,7 +142,7 @@ const Roadmap: FC = () => (
         <Div
           position="absolute"
           transform="rotate(135deg)"
-          top={['-35rem', '-35rem', '-45%']}
+          top={['-35%', '-35%', '-45%']}
           right={['20%', '15%', '15%', '-35%']}
         >
           <Img src="/img/line.webp" alt="Line" width={['17rem', '22rem']} />

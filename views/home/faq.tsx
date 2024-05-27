@@ -37,8 +37,8 @@ const AQ = [
     answer: (
       <>
         You can reach us at:{' '}
-        <A href="mailto:yoiinusolana@gmail.com" fontFamily="Grandstander">
-          yoiinusolana@gmail.com
+        <A href="mailto:hello@yoiinu.com" fontFamily="Grandstander">
+          hello@yoiinu.com
         </A>
       </>
     ),

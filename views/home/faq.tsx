@@ -1,4 +1,4 @@
-import { Div, H2, P, Section } from '@stylin.js/elements';
+import { A, Div, H2, P, Section } from '@stylin.js/elements';
 import { FC, useState } from 'react';
 import unikey from 'unikey';
 
@@ -27,8 +27,8 @@ const AQ = [
     question: 'Where can we buy?',
     answer: (
       <>
-        $YOI will available to buy on Jupiter and Raydium. Join the YOI INU chat
-        on Telegram for detailed instructions or help.
+        $YOI will be available to buy on Jupiter and Raydium. Join the YOI INU
+        chat on Telegram for detailed instructions or help.
       </>
     ),
   },
@@ -37,7 +37,9 @@ const AQ = [
     answer: (
       <>
         You can reach us at:{' '}
-        <a href="mailto:yoiinusolana@gmail.com">yoiinusolana@gmail.com</a>
+        <A href="mailto:yoiinusolana@gmail.com" fontFamily="Grandstander">
+          yoiinusolana@gmail.com
+        </A>
       </>
     ),
   },

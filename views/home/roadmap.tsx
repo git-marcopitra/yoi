@@ -91,7 +91,7 @@ const Roadmap: FC = () => (
           transform="rotate(45deg)"
           left={['15%', '15%', '15%', '-30%']}
         >
-          <Img src="/img/line.webp" alt="Line" width={['17rem', '20rem']} />
+          <Img src="/img/line.webp" alt="Line" width={['17rem', '22rem']} />
         </Div>
         <AnimatedBallon
           display="flex"
@@ -140,12 +140,12 @@ const Roadmap: FC = () => (
       </Div>
       <Div position="relative" zIndex="1">
         <Div
-          top="-35%"
           position="absolute"
-          transform="rotate(-45deg)"
-          right={['20%', '15%', '15%', '-30%']}
+          transform="rotate(135deg)"
+          top={['-35rem', '-35rem', '-45%']}
+          right={['20%', '15%', '15%', '-35%']}
         >
-          <Img src="/img/line.webp" alt="Line" width={['17rem', '20rem']} />
+          <Img src="/img/line.webp" alt="Line" width={['17rem', '22rem']} />
         </Div>
         <AnimatedBallon
           display="flex"

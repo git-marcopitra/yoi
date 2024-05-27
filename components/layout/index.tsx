@@ -131,6 +131,16 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
                 How to buy
               </Li>
             </Link>
+            <Link href="/#faq">
+              <Li
+                cursor="pointer"
+                transition="all 300ms ease-in"
+                onClick={() => setIsOpen(false)}
+                nHover={{ transform: 'scale(1.2)', color: '#F5EA8F' }}
+              >
+                FAQ
+              </Li>
+            </Link>
           </Nav>
         </Div>
       </Header>

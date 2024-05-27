@@ -116,9 +116,9 @@ const HowToBuy: FC = () => (
         </P>
       </Article>
       <Article
-        p="2rem 1rem"
         gap="2rem"
         bg="#40BAFA"
+        p="2rem 1rem"
         display="flex"
         alignItems="center"
         borderRadius="1rem"
@@ -126,13 +126,14 @@ const HowToBuy: FC = () => (
         border="1px solid #F5EA8F"
       >
         <Img
+          my="-1rem"
           width="10rem"
           height="10rem"
           borderRadius="50%"
           src="/img/about.webp"
         />
         <H3 color="#F5EA8F" textAlign="center" fontSize="0.8rem">
-          Switch SOL for $Yoi
+          Buy $Yoi
         </H3>
         <P
           color="#000000"

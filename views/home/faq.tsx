@@ -81,10 +81,11 @@ const FAQ: FC = () => {
                 py="2rem"
                 bg="white"
                 color="#ffffff"
-                fontSize="1.4rem"
-                lineHeight="2rem"
+                fontSize="1rem"
+                lineHeight="1.7rem"
                 borderRadius="1rem"
                 p={['1rem', '2rem']}
+                wordBreak="break-word"
                 fontFamily="Grandstander"
                 border="4px solid #F5EA8F"
                 onClick={(e) => e.stopPropagation()}

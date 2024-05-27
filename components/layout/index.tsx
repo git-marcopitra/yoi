@@ -158,7 +158,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
         <P color="#fff" fontSize="1.25rem" fontFamily="Grandstander">
           © 2024 Yoiinu • All Rights Reserved
         </P>
-        <Social />
+        <Social small />
       </Footer>
     </Main>
   );

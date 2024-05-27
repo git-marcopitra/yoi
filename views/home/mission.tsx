@@ -26,7 +26,12 @@ const Mission: FC = () => (
     maxWidth="76rem"
     alignItems="center"
     justifyContent="center"
-    flexDirection={['column', 'column', 'column', 'row']}
+    flexDirection={[
+      'column-reverse',
+      'column-reverse',
+      'column-reverse',
+      'row',
+    ]}
   >
     <Div
       p="2rem"
@@ -71,9 +76,15 @@ const Mission: FC = () => (
       alt="logo"
       whileInView="onscreen"
       initial="offscreenLeft"
-      variants={onScreenVariants}
       src="/img/mission.webp"
+      variants={onScreenVariants}
+      animate={{ y: ['1rem', '0rem'] }}
       maxWidth={['20rem', '22rem', '25rem', '32rem']}
+      transition={{
+        duration: 0.8,
+        repeat: Infinity,
+        repeatType: 'reverse',
+      }}
     />
   </Section>
 );

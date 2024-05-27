@@ -26,7 +26,13 @@ const About: FC = () => (
       whileInView="onscreen"
       initial="offscreenRight"
       variants={onScreenVariants}
+      animate={{ y: ['1rem', '0rem'] }}
       maxWidth={['20rem', '22rem', '25rem', '32rem']}
+      transition={{
+        duration: 0.8,
+        repeat: Infinity,
+        repeatType: 'reverse',
+      }}
     />
     <Div
       p="2rem"

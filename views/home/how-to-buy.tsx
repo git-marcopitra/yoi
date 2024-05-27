@@ -35,15 +35,15 @@ const HowToBuy: FC = () => (
         flexDirection="column"
         border="1px solid #40BAFA"
       >
-        <Img width="8rem" height="8rem" src="/img/wallet.webp" />
+        <Img width="8rem" height="8rem" src="/img/phantom.svg" />
         <H3 color="#40BAFA" textAlign="center" fontSize="0.8rem">
           Create a Wallet
         </H3>
         <P
           color="#000000"
+          textAlign="center"
           lineHeight="1.3rem"
           fontFamily="Grandstander"
-          textAlign={['center', 'center', 'unset']}
         >
           Download Phantom or your wallet of choice from the app store or google
           play store for free. Desktop users, download the google chrome
@@ -60,15 +60,24 @@ const HowToBuy: FC = () => (
         flexDirection="column"
         border="1px solid #F5EA8F"
       >
-        <Img width="8rem" height="8rem" src="/img/sol.png" />
+        <Div
+          p="1.5rem"
+          bg="#1D0B39"
+          width="8rem"
+          height="8rem"
+          overflow="hidden"
+          borderRadius="50%"
+        >
+          <Img width="5rem" height="5rem" src="/img/solana.svg" />
+        </Div>
         <H3 color="#40BAFA" textAlign="center" fontSize="0.8rem">
           Get Some SOL
         </H3>
         <P
           color="#000000"
+          textAlign="center"
           lineHeight="1.3rem"
           fontFamily="Grandstander"
-          textAlign={['center', 'center', 'unset']}
         >
           Have SOL in your wallet to switch to $Yoi. If you don’t have any SOL,
           you can buy SOL from an exchange or cross chain swap and send it to
@@ -86,19 +95,20 @@ const HowToBuy: FC = () => (
         border="1px solid #00EF8F"
       >
         <Img
+          bg="white"
           width="8rem"
           height="8rem"
           borderRadius="50%"
-          src="/img/raydium.png"
+          src="/img/raydium.svg"
         />
         <H3 color="#F5EA8F" textAlign="center" fontSize="0.8rem">
           Go to Raydium
         </H3>
         <P
           color="#000000"
+          textAlign="center"
           lineHeight="1.3rem"
           fontFamily="Grandstander"
-          textAlign={['center', 'center', 'unset']}
         >
           Go raydium.io in google chrome inside your Phantom app. Connect your
           wallet. Paste the $Yoi token address into Raydium and confirm the
@@ -116,19 +126,19 @@ const HowToBuy: FC = () => (
         border="1px solid #F5EA8F"
       >
         <Img
-          width="8rem"
-          height="8rem"
+          width="10rem"
+          height="10rem"
           borderRadius="50%"
-          src="/img/logo.webp"
+          src="/img/about.webp"
         />
         <H3 color="#F5EA8F" textAlign="center" fontSize="0.8rem">
           Switch SOL for $Yoi
         </H3>
         <P
           color="#000000"
+          textAlign="center"
           lineHeight="1.3rem"
           fontFamily="Grandstander"
-          textAlign={['center', 'center', 'unset']}
         >
           Switch SOL for $Yoi. We have ZERO taxes so you don’t need to worry
           about buying with a specific slippage, although you may need to use

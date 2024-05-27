@@ -32,71 +32,87 @@ const Tokenomics: FC = () => (
     mt={['3rem', '3rem', '3rem', '3rem', '10rem']}
   >
     <Div display="flex" flexDirection="column" alignItems="center">
-      <H2
-        color="#F5EA8F"
-        textAlign="center"
-        textShadow="1px 1px 5px #0003"
-        fontSize={['1.5rem', '2rem', '2rem', '3.5rem']}
+      <Div
+        display="flex"
+        alignItems="center"
+        mb={['2rem', '2rem', 'unset']}
+        flexDirection={['column-reverse', 'column-reverse', 'column']}
       >
-        Tokenomics
-      </H2>
-      <AnimatedDiv
-        width="25rem"
-        height="25rem"
-        color="#ffffff"
-        position="relative"
-        whileInView="onscreen"
-        initial="offscreenRight"
-        variants={onScreenVariants}
-        transform={['scale(0.8)', 'scale(1)']}
-      >
-        <Img alt="logo" width="25rem" src="/img/tokenomics.webp" />
-        <AnimatedSpan
-          top="15rem"
-          left="10rem"
-          position="absolute"
-          initial={{ scale: 1 }}
-          animate={{ scale: [0.3, 1.2] }}
+        <H2
+          color="#F5EA8F"
+          textAlign="center"
+          textShadow="1px 1px 5px #0003"
+          fontSize={['1.5rem', '2rem', '2rem', '3.5rem']}
+        >
+          Tokenomics
+        </H2>
+        <AnimatedDiv
+          whileInView="onscreen"
+          initial="offscreenRight"
+          variants={onScreenVariants}
+          animate={{ y: ['1rem', '0rem'] }}
           transition={{
+            duration: 0.8,
             repeat: Infinity,
             repeatType: 'reverse',
-            delay: Math.random() * 0.5,
-            duration: 0.8 + Math.random() * 0.3,
           }}
         >
-          <StarSVG maxHeight="1rem" maxWidth="1rem" width="100%" />
-        </AnimatedSpan>
-        <AnimatedSpan
-          top="15.5rem"
-          left="19rem"
-          position="absolute"
-          initial={{ scale: 1 }}
-          animate={{ scale: [0.7, 1.3] }}
-          transition={{
-            repeat: Infinity,
-            repeatType: 'reverse',
-            delay: Math.random() * 0.5,
-            duration: 0.8 + Math.random() * 0.3,
-          }}
-        >
-          <StarSVG maxHeight="1rem" maxWidth="1rem" width="100%" />
-        </AnimatedSpan>
-        <AnimatedSpan
-          top="18.5rem"
-          left="15.8rem"
-          position="absolute"
-          initial={{ scale: 1 }}
-          animate={{ scale: [0.8, 1.2] }}
-          transition={{
-            repeat: Infinity,
-            repeatType: 'reverse',
-            delay: Math.random() * 0.5,
-            duration: 0.8 + Math.random() * 0.3,
-          }}
-        >
-          <StarSVG maxHeight="1rem" maxWidth="1rem" width="100%" />
-        </AnimatedSpan>
-      </AnimatedDiv>
+          <Div
+            width="25rem"
+            height="25rem"
+            color="#ffffff"
+            position="relative"
+            transform={['scale(0.9)', 'scale(1)']}
+          >
+            <Img alt="logo" width="25rem" src="/img/tokenomics.webp" />
+            <AnimatedSpan
+              top="15rem"
+              left="10rem"
+              position="absolute"
+              initial={{ scale: 1 }}
+              animate={{ scale: [0.3, 1.2] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: 'reverse',
+                delay: Math.random() * 0.5,
+                duration: 0.8 + Math.random() * 0.3,
+              }}
+            >
+              <StarSVG maxHeight="1rem" maxWidth="1rem" width="100%" />
+            </AnimatedSpan>
+            <AnimatedSpan
+              top="15.5rem"
+              left="19rem"
+              position="absolute"
+              initial={{ scale: 1 }}
+              animate={{ scale: [0.7, 1.3] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: 'reverse',
+                delay: Math.random() * 0.5,
+                duration: 0.8 + Math.random() * 0.3,
+              }}
+            >
+              <StarSVG maxHeight="1rem" maxWidth="1rem" width="100%" />
+            </AnimatedSpan>
+            <AnimatedSpan
+              top="18.5rem"
+              left="15.8rem"
+              position="absolute"
+              initial={{ scale: 1 }}
+              animate={{ scale: [0.8, 1.2] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: 'reverse',
+                delay: Math.random() * 0.5,
+                duration: 0.8 + Math.random() * 0.3,
+              }}
+            >
+              <StarSVG maxHeight="1rem" maxWidth="1rem" width="100%" />
+            </AnimatedSpan>
+          </Div>
+        </AnimatedDiv>
+      </Div>
       <Div
         mx="auto"
         gap="2rem"

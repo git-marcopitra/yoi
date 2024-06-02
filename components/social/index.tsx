@@ -27,7 +27,7 @@ const Social: FC<{ small?: boolean }> = ({ small }) => (
     <AnimatedA
       target="_blank"
       whileHover={{ scale: 1.1 }}
-      href="https://x.com/yoiinu_?s=21"
+      href="https://x.com/yoi_world?s=21"
     >
       <Img
         alt="X"
